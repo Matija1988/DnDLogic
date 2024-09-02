@@ -10,6 +10,10 @@ namespace DnDLogic.Models.PlayableClasses
     {
         public string Name { get; set; }
 
+        public string Description { get; set; }
+
+        public char Gender { get; set; }    
+
         public int Strength { get; set; }
 
         public int Dexterity { get; set; }
