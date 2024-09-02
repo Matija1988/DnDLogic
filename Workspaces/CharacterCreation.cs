@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnDLogic.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,18 @@ using System.Threading.Tasks;
 
 namespace DnDLogic.Workspaces
 {
-    internal class CharacterCreation
+    public class CharacterCreation
     {
+        public static Player Player { get; set; }
+
+        public CharacterCreation()
+        {
+            CreateCharacterMenu();
+        }
+
+        private void CreateCharacterMenu ()
+        {
+            
+        }
     }
 }

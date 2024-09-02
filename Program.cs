@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using DnDLogic.Menues;
 using DnDLogic.Models;
 using DnDLogic.Models.Weapon;
 using DnDLogic.Models.Weapon.Enums;
@@ -11,6 +12,8 @@ using System.Reflection.Metadata.Ecma335;
 using System.Threading.Channels;
 
 Random rand = new Random();
+
+CharacterCreationMenu.CharacterCreationMainMenu();
 
 WeaponCreator swordSmith = new SwordFactory();
 WeaponCreator maceSmith  = new MaceFactory();
