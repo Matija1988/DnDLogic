@@ -14,6 +14,8 @@ namespace DnDLogic.Models.Player
 
         public string? Bio { get; set; }
 
+        public char Gender { get; set; }    
+
         public List<AbstAttribute>  Attributes { get; set; }
 
         public AbstPlayableClass PlayerClass { get; set; }
