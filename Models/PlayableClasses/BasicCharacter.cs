@@ -10,7 +10,6 @@ namespace DnDLogic.Models.PlayableClasses
     public class BasicCharacter
     {
         public string Name { get; set; }
-        public BaseAttributes BaseAttributes { get; set; }
         public string Description { get; set; }
         public char Gender { get; set; }
 

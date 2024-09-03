@@ -2,6 +2,7 @@
 
 using DnDLogic.Menues;
 using DnDLogic.Models;
+using DnDLogic.Models.Atributes;
 using DnDLogic.Models.Enums;
 using DnDLogic.Models.Weapon;
 using DnDLogic.Models.Weapon.Melee;
@@ -12,6 +13,10 @@ using System.Reflection.Metadata.Ecma335;
 using System.Threading.Channels;
 
 Random rand = new Random();
+
+Strength str = new Strength(15);
+
+Console.WriteLine(str.ToString());
 
 CharacterCreationMenu.CharacterCreationMainMenu();
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnDLogic.Models.Special;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace DnDLogic.Models.PlayableClasses
         public int Charisma { get; set; }
         public string Description { get; set; }
         public char Gender { get; set; }
+        public List<Ability> Abilities { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public Fighter (string name, string description, char gender, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
         {
