@@ -11,12 +11,24 @@ using System.Collections;
 using System.Collections.Concurrent;
 using System.Reflection.Metadata.Ecma335;
 using System.Threading.Channels;
+using System.Xml;
 
 Random rand = new Random();
 
 Strength str = new Strength(15);
+Dexterity dex = new Dexterity(17);
+Constitution constitution = new Constitution(12);
+Intelligence intel = new Intelligence(8);
+Wisdom wis = new Wisdom(5);
+Charisma chr  = new Charisma(7);
 
 Console.WriteLine(str.ToString());
+Console.WriteLine(dex.ToString());
+Console.WriteLine(constitution.ToString());
+Console.WriteLine(intel.ToString());
+Console.WriteLine(wis.ToString());
+Console.WriteLine(chr.ToString());
+
 
 CharacterCreationMenu.CharacterCreationMainMenu();
 

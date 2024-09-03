@@ -9,16 +9,13 @@ namespace DnDLogic.Models.Atributes
     public class Strength : AbstAttribute
     {
         public string Name { get; init; } = "Strength";
-        public int Value { get; set; }
-        public StringBuilder Description { get; init; }
-        public int Modifier { get; set; }
-
+       
         public Strength(int value)
         {
             Value = value;
             Modifier = CalculateModifier(value);
             Description = new StringBuilder();
-            Description.AppendLine("Strength measures a characters ability to exert physical force. " +
+            Description.Append("Strength measures a characters ability to exert physical force. " +
             "A character with high Strength can lift heavier objects, carry more gear without being overloaded," +
             " break things with brute force, shove and grapple creatures more effectively, and is more accurate and " +
             "more effective with melee weapons.\r\n\r\nThis is most important for characters who fight in melee using heavy" +
@@ -29,7 +26,7 @@ namespace DnDLogic.Models.Atributes
 
         public override string ToString ()
         {
-            return $"ATTRIBUTE: {Name} \nVALUE: {Value}\nMODIFIER: {Modifier}";
+            return $"ATTRIBUTE: {Name} \nVALUE: {Value}\nMODIFIER: {Modifier} \n";
         }
     }
 }
