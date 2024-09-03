@@ -2,8 +2,8 @@
 
 using DnDLogic.Menues;
 using DnDLogic.Models;
+using DnDLogic.Models.Enums;
 using DnDLogic.Models.Weapon;
-using DnDLogic.Models.Weapon.Enums;
 using DnDLogic.Models.Weapon.Melee;
 using DnDLogic.Models.Weapon.WeaponFactories;
 using System.Collections;

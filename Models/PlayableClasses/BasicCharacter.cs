@@ -1,4 +1,4 @@
-﻿using DnDLogic.Models.Special;
+﻿using DnDLogic.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace DnDLogic.Models.PlayableClasses
 {
-    public interface IPlayableClass
+    public class BasicCharacter
     {
         public string Name { get; set; }
-
+        public BaseAttributes BaseAttributes { get; set; }
         public string Description { get; set; }
+        public char Gender { get; set; }
 
-        public List<Ability> Abilities { get; set; }
+
     }
 }

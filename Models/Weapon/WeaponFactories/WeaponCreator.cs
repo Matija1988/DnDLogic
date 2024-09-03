@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DnDLogic.Models.Weapon.Enums;
+using DnDLogic.Models.Enums;
 
 namespace DnDLogic.Models.Weapon.WeaponFactories
 {

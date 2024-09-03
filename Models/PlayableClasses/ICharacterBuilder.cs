@@ -8,7 +8,7 @@ namespace DnDLogic.Models.PlayableClasses
 {
     public interface ICharacterBuilder
     {
-        void SetName (string name);
+        void SetName ();
 
         void SetDescription (string description);
 

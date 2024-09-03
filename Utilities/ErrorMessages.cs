@@ -11,7 +11,6 @@ namespace DnDLogic.Utilities
         public static void ErrorMessageInput()
         {
             Console.ForegroundColor = ConsoleColor.Red;
-
             GraphicElements.PrintChars("WRONG INPUT!!!", '!');
             Console.ResetColor();
         }

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DnDLogic.Models.Weapon.Enums
+namespace DnDLogic.Models.Enums
 {
-    public enum DamageTypes
+    public enum Races
     {
-        Piercing,
-        Bludgeoning,
-        Slashing
-
+        Human,
+        Dwarf,
+        Elf,
+        Half_elf
     }
 }

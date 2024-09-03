@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnDLogic.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -48,8 +49,8 @@ namespace DnDLogic.Models.PlayableClasses
 
         public void SetName ()
         {
-            string name = Console.ReadLine();
-           this.SetName(name);
+           string input = UserInputs.InputString("Enter character name: ");
+           this._fighter.Name = input;
         }
 
         public void SetStrength (int strength)

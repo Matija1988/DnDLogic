@@ -1,4 +1,4 @@
-﻿using DnDLogic.Models.Weapon.Enums;
+﻿using DnDLogic.Models.Enums;
 using DnDLogic.Models.Weapon.Melee;
 using System;
 using System.Collections.Generic;
