@@ -117,9 +117,5 @@ namespace DnDLogic.GUI.MenuLogic
 
         }
 
-        private void SetAttributes (CharBuilder charBuilder1)
-        {
-
-        }
     }
 }
