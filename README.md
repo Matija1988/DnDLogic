@@ -20,6 +20,7 @@ This project is NOT meant to be a full game rather a demonstration of the follow
    - LINQ
    - Using Dictionaries as rule sets
    - Extension classes and methods
+   - Partial and sealed classes
 
 
   Road map: 
