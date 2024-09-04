@@ -59,9 +59,14 @@ foreach (var attribute in charBuilder.player.Attributes)
     Console.Write(attribute.ToString());
 }
 
+var raceAbilities = charBuilder.player.AbstRace.RaceAbilities;
 
+Console.WriteLine("Race abilities count " + raceAbilities);
 
-CharacterCreationMenu.CharacterCreationMainMenu();
+foreach(var c in raceAbilities)
+{
+    Console.WriteLine(c.Name + "\n" + c.Description);
+}
 
 WeaponCreator swordSmith = new SwordFactory();
 WeaponCreator maceSmith  = new MaceFactory();

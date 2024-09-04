@@ -13,10 +13,12 @@ namespace DnDLogic.Menues
         {
             Console.ForegroundColor = ConsoleColor.Blue;
 
+            GraphicElements.DrawBox(0, 0, 80, 5);
+            Console.SetCursorPosition(4, 2);
             GraphicElements.PrintChars("CREATE CHARACTER", '*');
             Console.ResetColor();
             Console.WriteLine();
-            Console.WriteLine("1) Enter character name ");
+          
             
         }
 

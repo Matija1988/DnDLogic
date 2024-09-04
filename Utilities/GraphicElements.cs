@@ -26,5 +26,22 @@ namespace DnDLogic.Utilities
             Console.ResetColor();
             Console.WriteLine("");
         }
+
+        public static void DrawBox(int cursorX, int cursorY, int width, int height)
+        {
+            Console.SetCursorPosition(cursorX, cursorY);
+            Console.Write("+" + new string('-', width - 2) + "+");
+
+          
+            for (int i = 1; i < height - 1; i++)
+            {
+                Console.SetCursorPosition(cursorX, cursorY + i);
+                Console.Write("|" + new string(' ', width - 2) + "|");
+            }
+
+           
+            Console.SetCursorPosition(cursorX, cursorY + height - 1);
+            Console.Write("+" + new string('-', width - 2) + "+");
+        }
     }
 }

@@ -11,10 +11,11 @@ namespace DnDLogic.GUI.MenuLogic
 {
     public class MainMenuClass
     {
+      
         public MainMenuClass ()
         {
-            Console.SetWindowSize(1500, 1500);
-            MainMenuMethod();
+          //  Console.SetWindowSize(1500, 1500);
+            
         }
 
         public void MainMenuMethod ()
@@ -34,6 +35,7 @@ namespace DnDLogic.GUI.MenuLogic
                     ExitGame();
                     break;
                 case 1:
+                    
                     StartNewGame();
                     break;
                 default:
@@ -51,7 +53,10 @@ namespace DnDLogic.GUI.MenuLogic
 
         private void StartNewGame ()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            CharacterCreationGUI ccGUI = new();
+            ccGUI.CharacterCreation();
+            
         }
     }
 }
