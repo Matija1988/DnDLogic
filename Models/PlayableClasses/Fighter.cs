@@ -17,11 +17,9 @@ namespace DnDLogic.Models.PlayableClasses
         public List<Ability> Abilities { get; set; }
 
         public Fighter ()
-        {
-          
+        { 
             Description = new StringBuilder();
             Description.Append("");
-           
            
         }
 

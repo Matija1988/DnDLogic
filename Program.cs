@@ -59,9 +59,11 @@ rules.Add(x => x == 0, x => CriticalMiss(d20));
 rules.Add(x => x > armorRating, x => Hit(d20));
 rules.Add(x => x <= armorRating, x =>  Miss(d20));
 
-var result = from x in rules
-             where x.Key(d20)
-             select x.Value(d20);
+var result = rules.Where(x => x.Key(d20)).Select(x => x.Value(d20));
+
+//var result = from x in rules
+//             where x.Key(d20)
+//             select x.Value(d20);
 
 
 

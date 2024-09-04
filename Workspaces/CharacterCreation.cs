@@ -9,7 +9,7 @@ namespace DnDLogic.Workspaces
 {
     public class CharacterCreation
     {
-        public static Player Player { get; set; }
+      
 
         public CharacterCreation()
         {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DnDLogic.Models.Enums;
+using DnDLogic.Models.PlayableClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,13 +20,25 @@ namespace DnDLogic.Models.Player
 
         public void SetName (string name)
         {
-           this.player.Name = string.Empty;
+           this.player.Name = name;
         }
 
 
         public void setClass (int choice)
         {
-            throw new NotImplementedException();
+            int i = 0;
+
+           // foreach(var c in Enum.GetValues<ClassList>())
+           // {
+           //     Console.WriteLine(i++ + ") " + c.ToString());
+           // }
+            
+
+           //int c switch
+           // {
+           //     1 => new Fighter(),
+
+           // } ;
         }
 
         public void SetStrength (int strength)

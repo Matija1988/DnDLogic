@@ -14,7 +14,11 @@ namespace DnDLogic.Models.Player
 
         public string? Bio { get; set; }
 
-        public char Gender { get; set; }    
+        public char Gender { get; set; }
+
+        public int Level { get; set; }
+
+        public int Exp { get; set; }
 
         public List<AbstAttribute>  Attributes { get; set; }
 

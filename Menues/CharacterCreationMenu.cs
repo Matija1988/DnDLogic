@@ -19,5 +19,10 @@ namespace DnDLogic.Menues
             Console.WriteLine("1) Enter character name ");
             
         }
+
+        public static void ClassChoiceMenu()
+        {
+
+        }
     }
 }
