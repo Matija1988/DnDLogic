@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DnDLogic.Models.Atributes
 {
-    public class Strength : AbstAttribute
+    public sealed class Strength : AbstAttribute
     {
         public string Name { get; init; } = "Strength";
        

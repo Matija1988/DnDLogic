@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DnDLogic.Models.Atributes
 {
-    public class Constitution : AbstAttribute
+    public  sealed class Constitution : AbstAttribute
     {
         public string Name { get; init; } = "Constitution";
     
