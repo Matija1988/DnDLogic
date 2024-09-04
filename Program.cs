@@ -26,20 +26,28 @@ Charisma chr  = new Charisma(7);
 
 
 CharBuilder charBuilder = new CharBuilder();
-
 charBuilder.SetClass(1);
 charBuilder.SetName("SirDrinkAlot");
-charBuilder.SetStrength(18);
-charBuilder.SetDexterity(12);
+charBuilder.SetRace(1);
+
+var selectedRace = charBuilder.player.AbstRace.RaceAbilities.Find(x => x.Name.Equals("ABILITY SCORE INCREASE"));
+
+charBuilder.SetStrength(18 + selectedRace.Modifier);
+charBuilder.SetDexterity(12); 
 charBuilder.SetConstitution(16);
 charBuilder.SetIntelligence(10);
 charBuilder.SetWisdom(8);
 charBuilder.SetCharisma(8);
 charBuilder.SetGender('M');
 charBuilder.SetBio("Big, strong and not very bright!");
-charBuilder.SetRace(1);
 
-Console.WriteLine($"{charBuilder.player.Name} \nGENDER: {charBuilder.player.Gender} \nBIO: {charBuilder.player.Bio} \n {charBuilder.player.PlayerClass} \nRACE: {charBuilder.player.AbstRace.Name}");
+
+Console.WriteLine($"{charBuilder.player.Name} " +
+    $"\nGENDER: {charBuilder.player.Gender} " +
+    $"\nBIO: {charBuilder.player.Bio} " +
+    $"\n{charBuilder.player.PlayerClass} " +
+    $"\nRACE: {charBuilder.player.AbstRace.Name}");
+
 foreach (var attribute in charBuilder.player.Attributes)
 {
     Console.Write(attribute.ToString());

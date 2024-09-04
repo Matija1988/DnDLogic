@@ -8,12 +8,14 @@ namespace DnDLogic.Models.Races.RaceSpecial
 {
     public class RaceAbility
     {
+        public string Name { get; set; }
         public string Description { get; set; }
 
         public int Modifier { get; set; }
 
-        public RaceAbility(string description, int modifier)
+        public RaceAbility (string name, string description, int modifier)
         {
+            Name = name;
             Description = description;
             Modifier = modifier;
         }

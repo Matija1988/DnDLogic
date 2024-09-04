@@ -14,6 +14,6 @@ namespace DnDLogic.Models.Races
         public StringBuilder Description { get; init; }
         public List<RaceAbility> RaceAbilities { get; init; }
         public string Size { get; init; }
-        public int Speed { get; init; }
+        public int BaseSpeed { get; init; }
     }
 }

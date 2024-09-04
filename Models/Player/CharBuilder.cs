@@ -51,11 +51,11 @@ namespace DnDLogic.Models.Player
                 Console.WriteLine(++i + ") " + c.ToString());
             }
 
-            player.AbstRace = choice switch
+            this.player.AbstRace = choice switch
             {
-                1 => this.player.AbstRace = new Human(),
-                2 => this.player.AbstRace = new Dwarf(),
-                _ => throw new NotImplementedException()
+                1 =>  new Human(),
+                2 =>  new Dwarf(),
+                _ => throw new ArgumentOutOfRangeException("Invalid race choice")
             };
 
         }
