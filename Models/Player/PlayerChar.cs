@@ -20,8 +20,13 @@ namespace DnDLogic.Models.Player
 
         public int Exp { get; set; }
 
-        public List<AbstAttribute>  Attributes { get; set; }
+        public List<AbstAttribute>  Attributes { get; set; } 
 
         public AbstPlayableClass PlayerClass { get; set; }
+
+        public PlayerChar()
+        {
+            Attributes = new List<AbstAttribute>();
+        }
     }
 }

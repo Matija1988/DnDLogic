@@ -11,9 +11,9 @@ namespace DnDLogic.Models.Player
     {
         void SetName(string name);
 
-        void setBio (string? bio);
+        void SetBio (string? bio);
 
-        AbstPlayableClass setClass (int choice);
+        AbstPlayableClass SetClass (int choice);
 
         void SetGender(char gender);
 

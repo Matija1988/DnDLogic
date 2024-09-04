@@ -27,7 +27,7 @@ namespace DnDLogic.Models.PlayableClasses
 
         public override string ToString ()
         {
-            return $"Fighter: {Name} \nDescription: {Description} \n";
+            return $"CLASS: {Name} \nDESCRIPTION: {Description} \n";
         }
     }
 }

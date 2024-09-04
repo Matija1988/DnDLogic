@@ -10,6 +10,7 @@ using DnDLogic.Models.Weapon.Melee;
 using DnDLogic.Models.Weapon.WeaponFactories;
 using System.Collections;
 using System.Collections.Concurrent;
+using System.Diagnostics;
 using System.Reflection.Metadata.Ecma335;
 using System.Threading.Channels;
 using System.Xml;
@@ -23,18 +24,25 @@ Intelligence intel = new Intelligence(8);
 Wisdom wis = new Wisdom(5);
 Charisma chr  = new Charisma(7);
 
-Console.WriteLine(str.ToString());
-Console.WriteLine(dex.ToString());
-Console.WriteLine(constitution.ToString());
-Console.WriteLine(intel.ToString());
-Console.WriteLine(wis.ToString());
-Console.WriteLine(chr.ToString());
 
 CharBuilder charBuilder = new CharBuilder();
 
-charBuilder.setClass(1);
+charBuilder.SetClass(1);
+charBuilder.SetName("SirDrinkAlot");
+charBuilder.SetStrength(18);
+charBuilder.SetDexterity(12);
+charBuilder.SetConstitution(16);
+charBuilder.SetIntelligence(10);
+charBuilder.SetWisdom(8);
+charBuilder.SetCharisma(8);
+charBuilder.SetGender('M');
+charBuilder.SetBio("Big, strong and not very bright!");
 
-Console.WriteLine(charBuilder.player.PlayerClass.ToString());
+Console.WriteLine($"{charBuilder.player.Name} \nGENDER: {charBuilder.player.Gender} \nBIO: {charBuilder.player.Bio} \n {charBuilder.player.PlayerClass}");
+foreach (var attribute in charBuilder.player.Attributes)
+{
+    Console.Write(attribute.ToString());
+}
 
 
 

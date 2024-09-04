@@ -1,4 +1,5 @@
-﻿using DnDLogic.Models.Enums;
+﻿using DnDLogic.Models.Atributes;
+using DnDLogic.Models.Enums;
 using DnDLogic.Models.PlayableClasses;
 using System;
 using System.Collections.Generic;
@@ -18,13 +19,14 @@ namespace DnDLogic.Models.Player
 
         }
 
+     
         public void SetName (string name)
         {
             this.player.Name = name;
         }
 
 
-        public AbstPlayableClass setClass (int choice)
+        public AbstPlayableClass SetClass (int choice)
         {
             int i = 0;
 
@@ -43,42 +45,42 @@ namespace DnDLogic.Models.Player
 
         public void SetStrength (int strength)
         {
-            throw new NotImplementedException();
+           player.Attributes.Add(new Strength(strength));
         }
 
         public void SetDexterity (int dexterity)
         {
-            throw new NotImplementedException();
+           player.Attributes.Add(new Dexterity(dexterity)); 
         }
 
         public void SetConstitution (int constitution)
         {
-            throw new NotImplementedException();
+            player.Attributes.Add(new Constitution(constitution));
         }
 
         public void SetIntelligence (int intelligence)
         {
-            throw new NotImplementedException();
+           player.Attributes.Add(new Intelligence(intelligence));
         }
 
         public void SetWisdom (int wisdom)
         {
-            throw new NotImplementedException();
+            player.Attributes.Add(new Wisdom(wisdom));
         }
 
         public void SetCharisma (int charisma)
         {
-            throw new NotImplementedException();
+           player.Attributes.Add(new Charisma(charisma));
         }
 
         public void SetGender (char gender)
         {
-            throw new NotImplementedException();
+            player.Gender = gender;
         }
 
-        public void setBio (string? bio)
+        public void SetBio (string? bio)
         {
-            throw new NotImplementedException();
+            player.Bio = bio;
         }
 
     }
