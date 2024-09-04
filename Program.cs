@@ -4,6 +4,7 @@ using DnDLogic.Menues;
 using DnDLogic.Models;
 using DnDLogic.Models.Atributes;
 using DnDLogic.Models.Enums;
+using DnDLogic.Models.Player;
 using DnDLogic.Models.Weapon;
 using DnDLogic.Models.Weapon.Melee;
 using DnDLogic.Models.Weapon.WeaponFactories;
@@ -28,6 +29,13 @@ Console.WriteLine(constitution.ToString());
 Console.WriteLine(intel.ToString());
 Console.WriteLine(wis.ToString());
 Console.WriteLine(chr.ToString());
+
+CharBuilder charBuilder = new CharBuilder();
+
+charBuilder.setClass(1);
+
+Console.WriteLine(charBuilder.player.PlayerClass.ToString());
+
 
 
 CharacterCreationMenu.CharacterCreationMainMenu();
@@ -60,12 +68,6 @@ rules.Add(x => x > armorRating, x => Hit(d20));
 rules.Add(x => x <= armorRating, x =>  Miss(d20));
 
 var result = rules.Where(x => x.Key(d20)).Select(x => x.Value(d20));
-
-//var result = from x in rules
-//             where x.Key(d20)
-//             select x.Value(d20);
-
-
 
 Console.WriteLine(result.ToList().FirstOrDefault());
 

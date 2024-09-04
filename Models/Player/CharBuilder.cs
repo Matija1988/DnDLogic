@@ -11,34 +11,34 @@ namespace DnDLogic.Models.Player
     public class CharBuilder : ICharacterBuilder
     {
 
-        private PlayerChar player = new();
+        public PlayerChar player = new();
 
-        public CharBuilder()
+        public CharBuilder ()
         {
-            
+
         }
 
         public void SetName (string name)
         {
-           this.player.Name = name;
+            this.player.Name = name;
         }
 
 
-        public void setClass (int choice)
+        public AbstPlayableClass setClass (int choice)
         {
             int i = 0;
 
-           // foreach(var c in Enum.GetValues<ClassList>())
-           // {
-           //     Console.WriteLine(i++ + ") " + c.ToString());
-           // }
-            
+            foreach (var c in Enum.GetValues<ClassList>())
+            {
+                Console.WriteLine(++i + ") " + c.ToString());
+            }
 
-           //int c switch
-           // {
-           //     1 => new Fighter(),
 
-           // } ;
+            return choice switch
+            {
+                1 => this.player.PlayerClass = new Fighter(),
+
+            };
         }
 
         public void SetStrength (int strength)
@@ -70,7 +70,7 @@ namespace DnDLogic.Models.Player
         {
             throw new NotImplementedException();
         }
-              
+
         public void SetGender (char gender)
         {
             throw new NotImplementedException();

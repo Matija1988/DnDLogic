@@ -19,7 +19,9 @@ namespace DnDLogic.Models.PlayableClasses
         public Fighter ()
         { 
             Description = new StringBuilder();
-            Description.Append("");
+            Description.Append("Fighters share an unparalleled mastery with weapons and armor, and a " +
+                "thorough knowledge of the skills of combat.\nThey are well acquainted with death, both meting " +
+                "it out and staring it defiantly in the face.");
            
         }
 
