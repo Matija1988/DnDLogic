@@ -9,7 +9,7 @@ namespace DnDLogic.Models.Races.RaceSpecial
 {
     public class RaceList
     {
-        public ImmutableList<AbstRace> Races { get; set; }
+        public ImmutableList<AbstRace> Races { get;  }
         public RaceList()
         {
            Races = [new Human(), new Dwarf()];

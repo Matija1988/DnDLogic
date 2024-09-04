@@ -10,14 +10,10 @@ namespace DnDLogic.Models.PlayableClasses
 {
     public class Fighter : AbstPlayableClass
     {
-        public string Name { get; set; } = "Fighter";
-      
-        public StringBuilder Description { get; set; }
-      
-        public List<Ability> Abilities { get; set; }
-
+   
         public Fighter ()
-        { 
+        {
+            Name = "Fighter";
             Description = new StringBuilder();
             Description.Append("Fighters share an unparalleled mastery with weapons and armor, and a " +
                 "thorough knowledge of the skills of combat.\nThey are well acquainted with death, both meting " +

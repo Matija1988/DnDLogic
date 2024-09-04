@@ -9,8 +9,8 @@ namespace DnDLogic.Models.Races
 {
     public class Human : AbstRace
     {
-       
-        public Human()
+
+        public Human ()
         {
             Name = new StringBuilder();
             Name.Append("Human");
@@ -24,14 +24,13 @@ namespace DnDLogic.Models.Races
                 " the reach of any single human’s memory. They live fully in the present—making them well suited to the adventuring life—but also plan for \n" +
                 "the future, striving to leave a lasting legacy. Individually and as a group, humans are adaptable opportunists, and they stay alert to \n" +
                 "changing political and social dynamics.");
-            RaceAbilities = new List<RaceAbility>();
-            RaceAbilities =
-            [
+            RaceAbilities = new List<RaceAbility>
+            {
                 new RaceAbility("ABILITY SCORE INCREASE", "Increase two different attributes of your choice by 1", 1),
-                new RaceAbility("SKILLS","You gain proficiency in one skill of your choice.", 1),
-                new RaceAbility("FEAT","You gain one feat of your choice.", 1)
-            ];
-
+                new RaceAbility("SKILLS", "You gain proficiency in one skill of your choice.", 1),
+                new RaceAbility("FEAT", "You gain one feat of your choice.", 1)
+            };
+          
         }
     }
 }

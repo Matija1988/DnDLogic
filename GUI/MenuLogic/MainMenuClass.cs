@@ -14,7 +14,7 @@ namespace DnDLogic.GUI.MenuLogic
       
         public MainMenuClass ()
         {
-          //  Console.SetWindowSize(1500, 1500);
+          // Console.SetWindowSize(1500, 1500);
             
         }
 
