@@ -1,4 +1,5 @@
 ﻿using DnDLogic.Models.PlayableClasses;
+using DnDLogic.Models.Races;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,9 @@ namespace DnDLogic.Models.Player
 
         void SetBio (string? bio);
 
-        AbstPlayableClass SetClass (int choice);
+        void SetClass (int choice);
+
+        void SetRace(int choice);
 
         void SetGender(char gender);
 

@@ -10,6 +10,12 @@ namespace DnDLogic.Models.Races.RaceSpecial
     {
         public string Description { get; set; }
 
-        public int Modifyer { get; set; }
+        public int Modifier { get; set; }
+
+        public RaceAbility(string description, int modifier)
+        {
+            Description = description;
+            Modifier = modifier;
+        }
     }
 }

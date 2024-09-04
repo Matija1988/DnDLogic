@@ -1,6 +1,7 @@
 ﻿using DnDLogic.Models.Atributes;
 using DnDLogic.Models.Enums;
 using DnDLogic.Models.PlayableClasses;
+using DnDLogic.Models.Races;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,13 +21,11 @@ namespace DnDLogic.Models.Player
         }
 
      
-        public void SetName (string name)
-        {
-            this.player.Name = name;
-        }
+        public void SetName (string name) => player.Name = name;
+     
 
 
-        public AbstPlayableClass SetClass (int choice)
+        public void SetClass (int choice)
         {
             int i = 0;
 
@@ -36,52 +35,47 @@ namespace DnDLogic.Models.Player
             }
 
 
-            return choice switch
+            player.PlayerClass = choice switch
             {
                 1 => this.player.PlayerClass = new Fighter(),
-
+                _ => throw new NotImplementedException(),
             };
         }
 
-        public void SetStrength (int strength)
+        public void SetRace(int choice)
         {
-           player.Attributes.Add(new Strength(strength));
+            int i = 0;
+
+            foreach (var c in Enum.GetValues<RacesEnum>())
+            {
+                Console.WriteLine(++i + ") " + c.ToString());
+            }
+
+            player.AbstRace = choice switch
+            {
+                1 => this.player.AbstRace = new Human(),
+                2 => this.player.AbstRace = new Dwarf(),
+                _ => throw new NotImplementedException()
+            };
+
         }
 
-        public void SetDexterity (int dexterity)
-        {
-           player.Attributes.Add(new Dexterity(dexterity)); 
-        }
-
-        public void SetConstitution (int constitution)
-        {
-            player.Attributes.Add(new Constitution(constitution));
-        }
-
-        public void SetIntelligence (int intelligence)
-        {
-           player.Attributes.Add(new Intelligence(intelligence));
-        }
-
-        public void SetWisdom (int wisdom)
-        {
-            player.Attributes.Add(new Wisdom(wisdom));
-        }
-
-        public void SetCharisma (int charisma)
-        {
-           player.Attributes.Add(new Charisma(charisma));
-        }
-
-        public void SetGender (char gender)
-        {
-            player.Gender = gender;
-        }
-
-        public void SetBio (string? bio)
-        {
-            player.Bio = bio;
-        }
+        public void SetStrength (int strength) => player.Attributes.Add(new Strength(strength));
+       
+        public void SetDexterity (int dexterity) => player.Attributes.Add(new Dexterity(dexterity)); 
+       
+        public void SetConstitution (int constitution) => player.Attributes.Add(new Constitution(constitution));
+      
+        public void SetIntelligence (int intelligence) => player.Attributes.Add(new Intelligence(intelligence));
+      
+        public void SetWisdom (int wisdom) => player.Attributes.Add(new Wisdom(wisdom));
+       
+        public void SetCharisma (int charisma) => player.Attributes.Add(new Charisma(charisma));
+  
+        public void SetGender (char gender) => player.Gender = gender;
+      
+        public void SetBio (string? bio) => player.Bio = bio;
+      
 
     }
 }

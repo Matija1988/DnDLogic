@@ -37,8 +37,9 @@ charBuilder.SetWisdom(8);
 charBuilder.SetCharisma(8);
 charBuilder.SetGender('M');
 charBuilder.SetBio("Big, strong and not very bright!");
+charBuilder.SetRace(1);
 
-Console.WriteLine($"{charBuilder.player.Name} \nGENDER: {charBuilder.player.Gender} \nBIO: {charBuilder.player.Bio} \n {charBuilder.player.PlayerClass}");
+Console.WriteLine($"{charBuilder.player.Name} \nGENDER: {charBuilder.player.Gender} \nBIO: {charBuilder.player.Bio} \n {charBuilder.player.PlayerClass} \nRACE: {charBuilder.player.AbstRace.Name}");
 foreach (var attribute in charBuilder.player.Attributes)
 {
     Console.Write(attribute.ToString());

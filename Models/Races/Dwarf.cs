@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DnDLogic.Models.Races
 {
-    public class Dwarf : IRace
+    public class Dwarf : AbstRace
     {
         public string Name {  get; set; }
 

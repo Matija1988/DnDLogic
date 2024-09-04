@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace DnDLogic.Models.Races
 {
-    public interface IRace
+    public abstract class AbstRace : IRace
     {
-        public  StringBuilder Name { get; init; }
+
+        public StringBuilder Name { get; init; }
         public StringBuilder Description { get; init; }
-
-        public string Size { get; init; }
-
-        public int Speed { get; init; }
-
         public List<RaceAbility> RaceAbilities { get; init; }
+        public string Size { get; init; }
+        public int Speed { get; init; }
     }
 }
