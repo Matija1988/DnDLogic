@@ -30,6 +30,7 @@ namespace DnDLogic.Models.Player
         public PlayerChar()
         {
             Attributes = new List<AbstAttribute>();
+            
         }
     }
 }

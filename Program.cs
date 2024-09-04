@@ -36,7 +36,7 @@ charBuilder.SetClass(1);
 charBuilder.SetName("SirDrinkAlot");
 charBuilder.SetRace(1);
 
-var selectedRace = charBuilder.player.AbstRace.RaceAbilities.Find(x => x.Name.Equals("ABILITY SCORE INCREASE"));
+var selectedRace = charBuilder._player.AbstRace.RaceAbilities.Find(x => x.Name.Equals("ABILITY SCORE INCREASE"));
 
 charBuilder.SetStrength(18 + selectedRace.Modifier);
 charBuilder.SetDexterity(12); 
@@ -48,18 +48,18 @@ charBuilder.SetGender('M');
 charBuilder.SetBio("Big, strong and not very bright!");
 
 
-Console.WriteLine($"{charBuilder.player.Name} " +
-    $"\nGENDER: {charBuilder.player.Gender} " +
-    $"\nBIO: {charBuilder.player.Bio} " +
-    $"\n{charBuilder.player.PlayerClass} " +
-    $"\nRACE: {charBuilder.player.AbstRace.Name}");
+Console.WriteLine($"{charBuilder._player.Name} " +
+    $"\nGENDER: {charBuilder._player.Gender} " +
+    $"\nBIO: {charBuilder._player.Bio} " +
+    $"\n{charBuilder._player.PlayerClass} " +
+    $"\nRACE: {charBuilder._player.AbstRace.Name}");
 
-foreach (var attribute in charBuilder.player.Attributes)
+foreach (var attribute in charBuilder._player.Attributes)
 {
     Console.Write(attribute.ToString());
 }
 
-var raceAbilities = charBuilder.player.AbstRace.RaceAbilities;
+var raceAbilities = charBuilder._player.AbstRace.RaceAbilities;
 
 Console.WriteLine("Race abilities count " + raceAbilities);
 

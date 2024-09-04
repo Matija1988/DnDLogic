@@ -13,7 +13,7 @@ namespace DnDLogic.Models.Player
     public class CharBuilder : ICharacterBuilder
     {
 
-        public PlayerChar player = new();
+        public PlayerChar _player = new();
 
         public CharBuilder ()
         {
@@ -21,7 +21,7 @@ namespace DnDLogic.Models.Player
         }
 
      
-        public void SetName (string name) => player.Name = name;
+        public void SetName (string name) => _player.Name = name;
      
 
 
@@ -35,9 +35,9 @@ namespace DnDLogic.Models.Player
             }
 
 
-            player.PlayerClass = choice switch
+            _player.PlayerClass = choice switch
             {
-                1 => this.player.PlayerClass = new Fighter(),
+                1 => this._player.PlayerClass = new Fighter(),
                 _ => throw new NotImplementedException(),
             };
         }
@@ -51,7 +51,7 @@ namespace DnDLogic.Models.Player
                 Console.WriteLine(++i + ") " + c.ToString());
             }
 
-            this.player.AbstRace = choice switch
+            this._player.AbstRace = choice switch
             {
                 1 =>  new Human(),
                 2 =>  new Dwarf(),
@@ -60,33 +60,33 @@ namespace DnDLogic.Models.Player
 
         }
 
-        public void SetStrength (int strength) => player.Attributes.Add(new Strength(strength));
+        public void SetStrength (int strength) => _player.Attributes.Add(new Strength(strength));
 
-        public void SetStrenght (int strenght, int racialModifier) => player.Attributes.Add(new Strength(strenght +  racialModifier));
+        public void SetStrenght (int strenght, int racialModifier) => _player.Attributes.Add(new Strength(strenght +  racialModifier));
        
-        public void SetDexterity (int dexterity) => player.Attributes.Add(new Dexterity(dexterity));
+        public void SetDexterity (int dexterity) => _player.Attributes.Add(new Dexterity(dexterity));
 
-        public void SetDexterity (int dexterity, int racialModifier) => player.Attributes.Add(new Dexterity(dexterity + racialModifier));
+        public void SetDexterity (int dexterity, int racialModifier) => _player.Attributes.Add(new Dexterity(dexterity + racialModifier));
 
-        public void SetConstitution (int constitution) => player.Attributes.Add(new Constitution(constitution));
+        public void SetConstitution (int constitution) => _player.Attributes.Add(new Constitution(constitution));
 
-        public void SetConstitution (int constitution, int racialModifier) => player.Attributes.Add(new Constitution(constitution + racialModifier));
+        public void SetConstitution (int constitution, int racialModifier) => _player.Attributes.Add(new Constitution(constitution + racialModifier));
 
-        public void SetIntelligence (int intelligence) => player.Attributes.Add(new Intelligence(intelligence));
+        public void SetIntelligence (int intelligence) => _player.Attributes.Add(new Intelligence(intelligence));
 
-        public void SetIntelligence (int intelligence, int racialModifier) => player.Attributes.Add(new Intelligence(intelligence + racialModifier));
+        public void SetIntelligence (int intelligence, int racialModifier) => _player.Attributes.Add(new Intelligence(intelligence + racialModifier));
 
-        public void SetWisdom (int wisdom) => player.Attributes.Add(new Wisdom(wisdom));
+        public void SetWisdom (int wisdom) => _player.Attributes.Add(new Wisdom(wisdom));
 
-        public void SetWisdom (int wisdom, int racialModifier) => player.Attributes.Add(new Wisdom(wisdom + racialModifier));
+        public void SetWisdom (int wisdom, int racialModifier) => _player.Attributes.Add(new Wisdom(wisdom + racialModifier));
 
-        public void SetCharisma (int charisma) => player.Attributes.Add(new Charisma(charisma));
+        public void SetCharisma (int charisma) => _player.Attributes.Add(new Charisma(charisma));
 
-        public void SetCharisma (int charisma, int racialModifier) => player.Attributes.Add(new Charisma(charisma + racialModifier));
+        public void SetCharisma (int charisma, int racialModifier) => _player.Attributes.Add(new Charisma(charisma + racialModifier));
 
-        public void SetGender (char gender) => player.Gender = gender;
+        public void SetGender (char gender) => _player.Gender = gender;
       
-        public void SetBio (string? bio) => player.Bio = bio;
+        public void SetBio (string? bio) => _player.Bio = bio;
       
 
     }

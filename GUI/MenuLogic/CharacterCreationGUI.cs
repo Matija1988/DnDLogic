@@ -32,6 +32,7 @@ namespace DnDLogic.GUI.MenuLogic
             SetRace(charBuilder1);
             SetClass(charBuilder1);
             SetAttributes(charBuilder1);
+          
         }
 
         private void SetGender (CharBuilder charBuilder1)
