@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using DnDLogic.GUI.MenuLogic;
 using DnDLogic.Menues;
 using DnDLogic.Models;
 using DnDLogic.Models.Atributes;
@@ -14,6 +15,11 @@ using System.Diagnostics;
 using System.Reflection.Metadata.Ecma335;
 using System.Threading.Channels;
 using System.Xml;
+
+
+
+MainMenuClass mainMenuClass = new MainMenuClass();
+mainMenuClass.MainMenuMethod();
 
 Random rand = new Random();
 

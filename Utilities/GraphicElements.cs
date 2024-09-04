@@ -11,9 +11,9 @@ namespace DnDLogic.Utilities
         public static void PrintChars (string message, char charToPrint)
         {
             int messageLenght = message.Length;
-            int width = 80;
+            int width = 80 /2;
 
-            Console.ForegroundColor = ConsoleColor.DarkGray;
+           
             for (int i = 0; i < (width - messageLenght - 1); i++)
             {
                 Console.Write(charToPrint);
