@@ -86,7 +86,14 @@ namespace DnDLogic.GUI.MenuLogic
 
             Console.WriteLine($"Extra points left {extraPoints}");
 
+            if(extraPoints > 0)
+            {
+                AllocateRemainingPoints(extraPoints);
+            }
+
         }
+
+      
 
         private int SetCharisma (int extraPoints, CharBuilder charBuilder1)
         {
